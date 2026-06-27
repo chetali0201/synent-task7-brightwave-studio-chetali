@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – BrightWave Studio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+    <!-- ========= NAVBAR ========= -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Bright<span>Wave</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========= PAGE HEADER ========= -->
+    <div class="page-header">
+        <span class="tag">Say Hello</span>
+        <h1>Contact Us</h1>
+        <p>We usually reply within a business day. No automated responses, promise.</p>
+    </div>
+
+    <!-- ========= CONTACT SECTION ========= -->
+    <div class="contact-wrapper">
+
+        <!-- Left: Info -->
+        <div class="contact-info">
+            <h2>Let's figure out if we're a good fit.</h2>
+            <p>
+                Fill out the form and give us a bit of context about what you need.
+                We'll take a look and get back to you with some initial thoughts —
+                no sales pitch, just a genuine reply.
+            </p>
+
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <span class="detail-icon">📍</span>
+                    <div class="detail-text">
+                        <strong>Location</strong>
+                        <p>Bandra West, Mumbai, Maharashtra 400050</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-icon">📧</span>
+                    <div class="detail-text">
+                        <strong>Email</strong>
+                        <p>hello@brightwavestu.io</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-icon">📞</span>
+                    <div class="detail-text">
+                        <strong>Phone</strong>
+                        <p>+91 98200 12345 (Mon–Fri, 10am–6pm)</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-icon">⏱️</span>
+                    <div class="detail-text">
+                        <strong>Response Time</strong>
+                        <p>Usually within 24 hours on weekdays.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Not over-designing this section, just a small note -->
+            <div style="margin-top: 36px; padding: 20px; background: #eff6ff; border-radius: 8px; font-size: 0.875rem; color: var(--text-muted); border-left: 3px solid var(--main-blue);">
+                <strong style="color: var(--text-dark); display:block; margin-bottom:4px;">Not sure what you need?</strong>
+                That's completely fine. Describe your business and your goals —
+                we'll suggest what makes sense.
+            </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-box">
+            <h3>Send us a message</h3>
+
+            <!-- 
+                Note to self: no backend hooked up here
+                validation is all done in main.js
+                form won't actually submit anywhere
+            -->
+            <form id="contactForm" novalidate>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name *</label>
+                        <input type="text" id="fname" name="fname" placeholder="Priya" />
+                        <span class="error-msg" id="fname_err">Please enter your first name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name *</label>
+                        <input type="text" id="lname" name="lname" placeholder="Sharma" />
+                        <span class="error-msg" id="lname_err">Please enter your last name.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="priya@example.com" />
+                    <span class="error-msg" id="email_err">Please enter your email address.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98200 00000" />
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What are you interested in? *</label>
+                    <select id="service" name="service">
+                        <option value="">-- Choose a service --</option>
+                        <option value="website">Website Design & Development</option>
+                        <option value="branding">Brand Identity Design</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="maintenance">Website Maintenance</option>
+                        <option value="other">Something else</option>
+                    </select>
+                    <span class="error-msg" id="service_err">Please select a service.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Rough Budget (optional)</label>
+                    <select id="budget" name="budget">
+                        <option value="">-- Not sure yet --</option>
+                        <option value="under25">Under ₹25,000</option>
+                        <option value="25to50">₹25,000 – ₹50,000</option>
+                        <option value="50to1L">₹50,000 – ₹1,00,000</option>
+                        <option value="above1L">Above ₹1,00,000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us about your project *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="What does your business do? What are you trying to achieve? Any specific requirements or deadlines?"
+                    ></textarea>
+                    <span class="error-msg" id="message_err">Please write a bit about your project (at least 10 characters).</span>
+                </div>
+
+                <!-- submit button -->
+                <button type="submit" class="btn btn-primary btn-submit">
+                    Send Message
+                </button>
+
+                <!-- shown after successful submit -->
+                <div class="success-msg" id="successMsg">
+                    ✅ Thanks for reaching out! We'll get back to you within 24 hours.
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ========= MAP PLACEHOLDER ========= -->
+    <div style="background: #e5e7eb; height: 240px; display:flex; align-items:center; justify-content:center; font-size: 1rem; color: var(--text-muted);">
+        <!-- in a real project this would be an embedded Google Maps iframe -->
+        📍 Map embed would go here (Bandra West, Mumbai)
+    </div>
+
+    <!-- ========= FOOTER ========= -->
+    <footer style="margin-top: 0;">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">Bright<span>Wave</span></a>
+                    <p>A small digital agency making the web a bit more useful, one project at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><a href="mailto:hello@brightwavestu.io">hello@brightwavestu.io</a></li>
+                        <li><a href="#">+91 98200 12345</a></li>
+                        <li><a href="#">Mumbai, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BrightWave Studio. Made with too much coffee ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
